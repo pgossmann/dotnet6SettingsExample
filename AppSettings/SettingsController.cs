@@ -13,9 +13,8 @@ public class SettingsController : ControllerBase
     private readonly Settings _settings;
 
     // settings are injected with the IOptions<Settings>
-    public SettingsController(ILogger<SettingsController> logger, IOptions<Settings> settings)
+    public SettingsController(IOptions<Settings> settings)
     {
-        _logger = logger;
         _settings = settings.Value;
     }
 
